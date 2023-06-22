@@ -109,19 +109,18 @@ hr{
 }
 
 .terceirasecao{
-    
     height: 400px;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .terceirasecao div{
     background-color: #D9D9D9;
     height: 360px;
-   width: 360px;
-   margin:10px;
+    width: 100%;
+    margin:10px;
 }
 h1{
     display: flex;
