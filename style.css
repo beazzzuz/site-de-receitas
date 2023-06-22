@@ -101,15 +101,11 @@ hr{
     
 }
 
-
 #b4{
     background-color: #D9D9D9;
    height: 335px;
    width: 800px;
    margin:10px;
-   
-   
-   
 }
 
 .terceirasecao{
@@ -120,6 +116,7 @@ hr{
     justify-content: center;
 
 }
+
 .terceirasecao div{
     background-color: #D9D9D9;
     height: 360px;
@@ -154,9 +151,10 @@ h1{
     height: 135.59px;
     width: 600px;
     margin:10px;
-   
 }
+
 .r1{
+    cursor: pointer;
     height: 100px;
     background-color: #D9D9D9;
     width: 100px;;
