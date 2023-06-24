@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="style-receita.css">
     <title>Site de receitas</title>
+    <script type="module" src="scriptMain.js"></script>
 </head>
 <body>
     <header>
-        <div id="cabecalho">
+        <div class = "cabecalho">
+
             <p>home</p>
             <p>menu</p>
             <p>sobre</p>
 
-            <h1> Nome do site </h1>
         </div>
     </header>
-    
-    <section id="primeirasecao">
-        <h1> nome da receita </h1>
 
-        <div><p>Foto da receita</p></div>
-        <div>
-            <h1>Ingredientes</h1>
+
+    <h1> nome da receita </h1>
+    <br>
+    <h2>Ingredientes</h2>
+    
+    <section class = "primeirasecao">
         
-            <ol>
+        <div id = "fotoReceita">
+            <p>Foto da receita</p>
+        </div>
+        <div>
+            <ul class = "Ingredientes">
                 <l1>Ingredientes</l1>
                 <l1>Ingredientes</l1>
                 <l1>Ingredientes</l1>
@@ -31,32 +38,50 @@
                 <l1>Ingredientes</l1>
                 <l1>Ingredientes</l1>
                 <l1>Ingredientes</l1>
-            </ol>
+            </ul>
         </div>
     </section>
 
-    <section id="segundasecao">
-        <h1>Modo de preparo</h1>
+    <h1 id="MeioPagina">Modo de preparo</h1>
 
-        <div>
+    <section class = "segundasecao">
+        
             <ol>
-                <li> Modo de preparo </li>
-                    <p> textotextotextotextotextotexto </p>
-                <li>Modo de preparo</li>
-                    <p> textotextotextotextotextotexto </p>
-                <li> Modo de preparo </li>
-                    <p> textotextotextotextotextotexto </p>
+                <div class = "esquerda">
+                    <li> Modo de preparo </li>
+                        <br>
+                        <p> 
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                        </p>
+                </div>
+
+                <div class = "direita">
+                    <li> Modo de preparo </li>
+                        <br>
+                        <p> 
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                            textotextotextotextotextotexto
+                        </p>
+                </div>
             </ol>
 
-        </div>
     </section>
 
     <footer>  
-        <div id="rodape">
             <p>dado1</p>
             <p>dado2</p>
             <p>dado3</p>
-        </div>
     </footer>
 
 </body>
