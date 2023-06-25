@@ -130,7 +130,6 @@ hr{
 }
 
 .carousel {
-    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -139,11 +138,12 @@ hr{
     display: flex;
     transition: transform 0.5s ease;
     gap:2em;
+    margin: 0 20px;
 }
 
 .carousel-item {
-    flex: 0 0 50%;
-    height: 300px;
+    flex: 0 0 calc(100% / 3 - 34px);     
+    height: 500px;
     margin: 10px 0;
     background-color: #f5f5f5;
     display: flex;

@@ -39,11 +39,11 @@ const prevBtn = carousel.querySelector('.prev-btn');
 const nextBtn = carousel.querySelector('.next-btn');
 
 let currentIndex = 0;
-const itemWidth = carouselItems[0].offsetWidth * 2;
-const itemsPerScreen = 2;
+const itemWidth = carouselItems[0].offsetWidth;
+const itemsPerScreen = 3;
 
 function moveToIndex(index) {
-  const position = -index * itemWidth;
+  const position = -index * itemWidth * itemsPerScreen;
   carouselInner.style.transform = `translateX(${position}px)`;
   currentIndex = index;
 }
