@@ -29,3 +29,42 @@ function handleMoveToRecipes(key){
     //essa key vai ser utilizada para passar por parametro para a página de cada receita
     window.location.href = "Receita.html";
 }
+
+//Carrossel
+
+const carousel = document.querySelector('.carousel');
+const carouselInner = carousel.querySelector('.carousel-inner');
+const carouselItems = carousel.querySelectorAll('.carousel-item');
+const prevBtn = carousel.querySelector('.prev-btn');
+const nextBtn = carousel.querySelector('.next-btn');
+
+let currentIndex = 0;
+const itemWidth = carouselItems[0].offsetWidth * 2;
+const itemsPerScreen = 2;
+
+function moveToIndex(index) {
+  const position = -index * itemWidth;
+  carouselInner.style.transform = `translateX(${position}px)`;
+  currentIndex = index;
+}
+
+function updateButtons() {
+  prevBtn.disabled = currentIndex === 0;
+  nextBtn.disabled = currentIndex >= Math.ceil(carouselItems.length / itemsPerScreen) - 1;
+}
+
+prevBtn.addEventListener('click', () => {
+  if (currentIndex > 0) {
+    moveToIndex(currentIndex - 1);
+    updateButtons();
+  }
+});
+
+nextBtn.addEventListener('click', () => {
+  if (currentIndex < Math.ceil(carouselItems.length / itemsPerScreen) - 1) {
+    moveToIndex(currentIndex + 1);
+    updateButtons();
+  }
+});
+
+updateButtons();
