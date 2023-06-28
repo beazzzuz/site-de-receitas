@@ -34,10 +34,10 @@ h1{
 
 h2 {
     display: flex;
-    align-items: right;
-    justify-content: right;
+    align-items: left;
+    justify-content: left;
     margin: 20px;
-    margin-right: 25%;
+    margin-left: 40%;
 }
 
 .primeirasecao{
@@ -45,9 +45,6 @@ h2 {
     justify-content: space-around;
 }
 
-.ingredientes{
-    margin-top: 100px;
-}
 
 #fotoReceita{
     background-color: #D9D9D9;
@@ -55,6 +52,13 @@ h2 {
     margin: 100px 100px ;
     border-radius: 45px;
 
+}
+
+.ingredientes{ 
+    display: flex;
+    align-items: left;
+    margin-top: 100px;
+    /*NÃO CONSIGO CENTRALIZAR NA ESQUERDA AAAA*/
 }
 
 ol {
