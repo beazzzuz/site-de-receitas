@@ -27,7 +27,7 @@ receitas.map((receita, key)=>{
 
 function handleMoveToRecipes(key){
     //essa key vai ser utilizada para passar por parametro para a página de cada receita
-    window.location.href = "Receita.html";
+    window.location.href = `Receita.html?id=${key}`;
 }
 
 //Carrossel
