@@ -12,6 +12,7 @@ const id = urlParams.get('id');
 //pegando exatamente o produto com esse id:
 
 let receitaDados;
+
 receitas.map((receita, key)=>{
     if(key == id){
         //agora pode trabalhar com os dados da receita pela variavel receitaDados

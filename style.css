@@ -208,17 +208,43 @@ hr{
     
    
 }
-.quadrodereceitas div{
-    background-color: #D9D9D9;
+.quadrodereceitas .receitaDiv{
+    border: 3px solid #afaaaa;
+    border-radius: 8px;
     height: 135.59px;
-    width: 600px;
+    width: 400px;
     margin:10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.quadrodereceitas .receitaDiv .imgDiv{
+    margin: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.quadrodereceitas .receitaDiv .imgDiv img{
+    border-radius:8px;
+    width:100px;
+    height:100px;
+}
+
+.quadrodereceitas .receitaDiv .propsDiv{
+    display: flex;
+    height:100%;
+    width:100%;
+    margin-left: 10px;
+    align-items: center;
+}
+.quadrodereceitas .receitaDiv .propsDiv p{
+    font-size:14px;
+    font-weight: bold;
 }
 
 .r1{
     cursor: pointer;
     height: 100px;
-    background-color: #D9D9D9;
     width: 100px;;
 }
 #scroll{

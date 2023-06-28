@@ -9,20 +9,31 @@ let quadroReceitas = document.querySelector(".quadrodereceitas");
 //mapeia cada receita
 receitas.map((receita, key)=>{
     //Cria elemento por elemento que tem na div de cada receita
-    let div = document.createElement('div')
-    div.addEventListener('click',()=>{handleMoveToRecipes(key)})
-    
     let receitaDiv = document.createElement('div')
+    receitaDiv.addEventListener('click',()=>{handleMoveToRecipes(key)})
+
     receitaDiv.id = `receita-${key}` //Id para identificação do conteúdo
-    receitaDiv.className = 'r1' //coloquei a classe que tava no HTML se mudar la, é necessário mudar aqui para ir o CSS
+    receitaDiv.className = 'receitaDiv' //coloquei a classe que tava no HTML se mudar la, é necessário mudar aqui para ir o CSS
     
-    let text = document.createElement('p');
-    text.innerHTML = receita.title;
+    const receitaText = document.createElement('p');
+    receitaText.innerHTML = receita.title;
+    const receitaImg = document.createElement('img');
+    receitaImg.src=receita.photo_url;
+
+    const imgDiv = document.createElement('div');
+    const propsDiv = document.createElement('div');
+
+    imgDiv.className = 'imgDiv';
+    propsDiv.className = 'propsDiv';
     
     //adiciona os elementos no html
-    receitaDiv.appendChild(text);
-    div.appendChild(receitaDiv);
-    quadroReceitas.appendChild(div);
+    
+    propsDiv.appendChild(receitaText);
+    imgDiv.appendChild(receitaImg);
+
+    receitaDiv.appendChild(imgDiv);
+    receitaDiv.appendChild(propsDiv);
+    quadroReceitas.appendChild(receitaDiv);
 })
 
 function handleMoveToRecipes(key){
