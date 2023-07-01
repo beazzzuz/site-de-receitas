@@ -10,7 +10,6 @@ const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id');
 
 //pegando exatamente o produto com esse id:
-
 let receitaDados;
 
 
@@ -20,17 +19,44 @@ receitas.map((receita, key)=>{
         receitaDados = receita;
     }
 })
+
+const tituloDiv = document.querySelector(".titulo");
+const nomeReceita = document.createElement('h1');
+nomeReceita.innerHTML = receitaDados.title;
+tituloDiv.appendChild(nomeReceita);
+
+
+const receitaImg = document.getElementById('receitaImg');
+receitaImg.src=receitaDados.photo_url;
+
+
+const receitasOl = document.querySelector('.ingredientesOl');
+receitaDados.ingredients.map((ingredient, key)=>{
+    const ingredientLi = document.createElement('li');
+    ingredientLi.innerHTML = ingredient;
+    receitasOl.appendChild(ingredientLi);
+})
+
+
+const preparoOl = document.querySelector(".preparoOl");
+receitaDados.instructions.map((instructions, key)=>{
+    const instructionDiv = document.createElement('div');
+    if(key%2==0){
+        instructionDiv.className = "esquerda";
+    }else{
+        instructionDiv.className = "direita";
+    }
+    const instructionLi = document.createElement('li');
+    instructionLi.innerHTML = "Modo de preparo"
+    const br = document.createElement('br');
+    const p = document.createElement('p');
+    p.innerHTML = instructions;
+
+    instructionDiv.appendChild(instructionLi);
+    instructionDiv.appendChild(br);
+    instructionDiv.appendChild(p);
+    preparoOl.appendChild(instructionDiv);
+})
+
+
 console.log(receitaDados);
-
-    const tituloDiv = document.querySelector(".titulo");
-    const nomeReceita = document.createElement('h1');
-    nomeReceita.innerHTML = receitaDados.title;
-    tituloDiv.appendChild(nomeReceita);
-
-
-    const receitaImg = document.createElement('ImgReceita');
-    receitaImg.src=receita.photo_url;
-    const imgDiv = document.createElement('div');
-    imgDiv.Idname = 'FotoReceita';
-    imgDiv.appendChild(receitaImg);
-

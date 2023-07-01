@@ -41,6 +41,14 @@ function handleMoveToRecipes(key){
     window.location.href = `Receita.html?id=${key}`;
 }
 
+const typeButton = document.querySelector(".typeButton");
+typeButton.addEventListener("click",()=>{
+  handleMoveToTypes()
+})
+
+function handleMoveToTypes(){
+  window.location.href = `Tipos.html`
+}
 //Carrossel
 
 const carousel = document.querySelector('.carousel');
