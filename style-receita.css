@@ -50,10 +50,6 @@ h1{
     justify-content: center;
 }
 
-.titulo{
-    margin-top: 15px;
-}
-
 .primeirasecao{ 
     display: flex;
     width: 100%;
