@@ -27,7 +27,7 @@ header h1{
 
 .cabecalho{
     display:flex;
-    justify-content:flex-end;
+    justify-content:flex-start;
     height: 200px;
     margin-right: 30px;
 }
