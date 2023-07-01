@@ -32,41 +32,52 @@ h1{
     justify-content: center;
 }
 
-h2 {
+.primeirasecao{ 
     display: flex;
-    align-items: left;
-    justify-content: left;
-    margin: 20px;
-    margin-left: 40%;
-}
-
-.primeirasecao{
-    display: flex;
-    justify-content: space-around;
+    width: 100%;
+    grid-template-columns: 2;
+    margin: 50px 0;
+    flex-wrap: wrap;    
 }
 
 
 #fotoReceita{
-    background-color: #D9D9D9;
-    padding: 150px 50px 150px 50px;
-    margin: 100px 100px ;
+    width: 60%;
     border-radius: 45px;
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.ingredientes{ 
+#fotoReceita img{
+    border-radius: 8px;   
+}
+
+#ingredientes{ 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: auto;
+    margin-top:-50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#ingredientes h2{
+    text-align: left;
     display: flex;
     align-items: left;
-    margin-top: 100px;
-    /*NÃO CONSIGO CENTRALIZAR NA ESQUERDA AAAA*/
+    text-align: center;
+    margin: 20px;
 }
 
 ol {
-    list-style-type: upper-roman;
+    list-style-type: decimal;
 }
 
 #MeioPagina {
     background-color: #D9D9D9;
+    padding: 10px 0;
 }
 
 .segundasecao {
