@@ -13,11 +13,24 @@ const id = urlParams.get('id');
 
 let receitaDados;
 
+
 receitas.map((receita, key)=>{
     if(key == id){
         //agora pode trabalhar com os dados da receita pela variavel receitaDados
         receitaDados = receita;
     }
 })
-
 console.log(receitaDados);
+
+    const tituloDiv = document.querySelector(".titulo");
+    const nomeReceita = document.createElement('h1');
+    nomeReceita.innerHTML = receitaDados.title;
+    tituloDiv.appendChild(nomeReceita);
+
+
+    const receitaImg = document.createElement('ImgReceita');
+    receitaImg.src=receita.photo_url;
+    const imgDiv = document.createElement('div');
+    imgDiv.Idname = 'FotoReceita';
+    imgDiv.appendChild(receitaImg);
+
