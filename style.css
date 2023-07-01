@@ -47,12 +47,6 @@ header{
     font-size: 20px;
 }
 
-.cabecalho .banner_principal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .cabecalho h1 {
     font-size: 110px;
     margin-top: 5%;
