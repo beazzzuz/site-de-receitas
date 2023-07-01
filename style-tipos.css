@@ -8,12 +8,12 @@
 header{
     background-color: #D9D9D9;
     margin:0;
-    height: 8%;
+    height: 50px;
 }
 
 .cabecalho{
     display:flex;
-    justify-content:flex-start;
+    text-decoration:none;
     height: 10%;
     margin-right: 30px;
 }
@@ -22,9 +22,15 @@ header{
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
-    font-size: 10px;
+    text-decoration:none;
+    font-size: 20px;
 }
+
+.cabecalho a{
+    color:inherit;
+    text-decoration:none;
+}
+
 .lista{
     display:flex;
     align-items: center;
@@ -50,6 +56,7 @@ header{
 
 .borda_teceira_pagina p {
     margin: 0; 
+    font-size: 1em;
 }
 
 footer{
