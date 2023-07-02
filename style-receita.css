@@ -4,26 +4,44 @@
   
   }
 
+body{
+    overflow-x: hidden;
+}
 
 header{
-    background-color: #D9D9D9;
-    margin:0;
-    height: 160px;
+    margin: 0;
+}
+.container{
+    position: relative;   
 }
 
 .cabecalho{
-    display:flex;
-    justify-content:flex-end;
-    height: 200px;
-    margin-right: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.cabecalho .barra_inicial {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 .cabecalho p{
-    margin: 10px;
     display: flex;
     flex-wrap: wrap;
-    align-content: space-between;
+    margin: 10px;
     font-size: 20px;
+    text-align: center;
+}
+
+.cabecalho .barra_inicial a{
+    text-decoration: none;
+    color: inherit;
 }
 
 h1{
@@ -33,37 +51,52 @@ h1{
     justify-content: center;
 }
 
-h2 {
+.primeirasecao{ 
     display: flex;
-    align-items: right;
-    justify-content: right;
-    margin: 20px;
-    margin-right: 25%;
+    width: 100%;
+    grid-template-columns: 2;
+    margin: 50px 0;
+    flex-wrap: wrap;    
 }
 
-.primeirasecao{
-    display: flex;
-    justify-content: space-around;
-}
-
-.ingredientes{
-    margin-top: 100px;
-}
 
 #fotoReceita{
-    background-color: #D9D9D9;
-    padding: 150px 50px 150px 50px;
-    margin: 100px 100px ;
+    width: 60%;
     border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+#fotoReceita img{
+    border-radius: 8px;   
+}
+
+#ingredientes{ 
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: auto;
+    margin-top:-50px;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#ingredientes h2{
+    text-align: left;
+    display: flex;
+    align-items: left;
+    text-align: center;
+    margin: 20px;
 }
 
 ol {
-    list-style-type: upper-roman;
+    list-style-type: decimal;
 }
 
 #MeioPagina {
     background-color: #D9D9D9;
+    padding: 10px 0;
 }
 
 .segundasecao {

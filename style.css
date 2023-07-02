@@ -1,37 +1,60 @@
 * {
     margin: 0;
     padding: 0;
-  
   }
+
+body{
+    overflow-x:hidden;
+}
+
+body h1{
+    width:100%;
+    text-align:center;
+}
+
 header{
-    background-color: #D9D9D9;
     margin:0;
-    height: 600px;
-   
-
 }
 
-header h1{
+.container{
+    position: relative;   
+}
+
+#gambiarra{
+    width: 100%;
+    height: 100px;
+    background-color: #D9D9D9;
+}
+
+.cabecalho {
     display: flex;
-    justify-content: center;
-    font-size: 128px;
-   
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
 }
 
-.cabecalho{
-    display:flex;
-    justify-content:flex-end;
-    height: 200px;
-    margin-right: 30px;
+.cabecalho .barra_inicial {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
 }
 
-.cabecalho p{
+.cabecalho .barra_inicial p {
     margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
     font-size: 20px;
 }
+
+.cabecalho h1 {
+    font-size: 110px;
+    margin-top: 5%;
+    white-space: nowrap;
+    text-align: center;
+}
+
+
 
 .primeirasecao{
     
@@ -40,14 +63,18 @@ header h1{
     align-items: center;
     justify-content:space-around;
 }
+
 .primeirasecao div{
     background-color: #D9D9D9;
     margin: 5px;
-    height: 150px;
-    width: 150px;
+    height: 5rem;
+    width: 5rem;
     border-radius: 80px;
- 
+    cursor: pointer;
 }
+
+
+
 .tipos{
     margin: auto;
     display: flex;
@@ -62,34 +89,32 @@ hr{
 
 
 .segundasecao{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner{
     height: 750px;
-    
     margin: 30px;
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
-  
 }
-
 
 #b1{
    background-color: #D9D9D9;
-   height: 700px;
-   width: 500px;
+   height: 93.33%;
+   width: 40%;
    align-self: flex-start;
-   margin:10px;
-   
-   
+   margin: 5px 5px 0 5px;
+   background-image: url("./img/banner1.png");
 }
-#b2, #b3{
-    background-color: #D9D9D9;
-   height: 345px;
-   width: 390px;
-   margin: 10px;
-   
 
-}
 .alinhabanner{
     align-items: center;
     display: flex;
@@ -97,38 +122,120 @@ hr{
     flex-wrap: wrap;
     padding: 0px;
     margin: 0px;
-    
-    
+    width: 80%;
+    height: 93.33%;
 }
 
+#b2b3{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50%;
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#b2 {
+    background-image: url("./img/banner2.png");
+}
+
+#b3 {
+    background-image: url("./img/banner3.png");
+}
+#b2, #b3{
+   background-color: #D9D9D9;
+   height: 100%;
+   width: 100%;
+   margin: 5px 5px 5px 5px;
+}
+
+#divb4{
+    height: 48.55%;
+    width: 100%;
+    margin: 5px 5px 5px 5px;
+}
 #b4{
     background-color: #D9D9D9;
-   height: 335px;
-   width: 800px;
-   margin:10px;
-}
+    height: 100%;
+    width: 100%;
+    background-image: url("./img/banner4.png");
+ }
 
 .terceirasecao{
-    
-    height: 400px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-
+    margin: 100px 0;
 }
 
 .terceirasecao div{
-    background-color: #D9D9D9;
-    height: 360px;
-   width: 360px;
-   margin:10px;
+    width: 100%;
+    margin-bottom:10px;
+    margin-top:10px;
 }
-h1{
+
+.carousel {
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap:2em;
+    margin: 0 20px;
+}
+
+.carousel-item {
+    flex: 0 0 calc(100% / 3 - 34px);     
+    height: 500px;
+    margin: 10px 0;
+    background-color: #f5f5f5;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 30px;
+    font-size: 24px;
+    border-radius: 0.5em;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
 }
+
+.carousel-btn {
+    background-color: #333;
+    position: absolute;
+    top: 50%;
+    margin:0 40px;
+    border-radius:100%;
+    width: 60px;
+    height: 60px;
+    font-size:35px;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.carousel-btn:hover{
+    background-color: #474747;
+}
+
+.carousel-btn p{
+    position:absolute;
+    top:12%;
+    left:39%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+  
+  
 .quartasecao{
     display: flex;
     justify-content: center;
@@ -146,17 +253,43 @@ h1{
     
    
 }
-.quadrodereceitas div{
-    background-color: #D9D9D9;
+.quadrodereceitas .receitaDiv{
+    border: 3px solid #afaaaa;
+    border-radius: 8px;
     height: 135.59px;
-    width: 600px;
+    width: 400px;
     margin:10px;
+    display: flex;
+    cursor: pointer;
+}
+
+.quadrodereceitas .receitaDiv .imgDiv{
+    margin: 10px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.quadrodereceitas .receitaDiv .imgDiv img{
+    border-radius:8px;
+    width:100px;
+    height:100px;
+}
+
+.quadrodereceitas .receitaDiv .propsDiv{
+    display: flex;
+    height:100%;
+    width:100%;
+    margin-left: 10px;
+    align-items: center;
+}
+.quadrodereceitas .receitaDiv .propsDiv p{
+    font-size:14px;
+    font-weight: bold;
 }
 
 .r1{
     cursor: pointer;
     height: 100px;
-    background-color: #D9D9D9;
     width: 100px;;
 }
 #scroll{

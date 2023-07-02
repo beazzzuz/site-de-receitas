@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+  }
+
+body{
+    overflow-x:hidden;
+}
+
+header{
+    margin: 0;
+}
+
+.container{
+    position: relative;   
+}
+
+.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.cabecalho .barra_inicial {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.cabecalho p{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cabecalho .barra_inicial a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.lista{
+    display:flex;
+    align-items: center;
+    flex-wrap:wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.borda_teceira_pagina {
+    display: flex;
+    align-items: center;
+    border: 2px solid rgb(94, 86, 86);
+    border-radius: 7px;
+    align-content: space-around;
+    width: 70%;
+    margin:10px;
+}
+
+.borda_teceira_pagina img {
+    width: 35%; 
+    margin-right: 10px; 
+}
+
+.borda_teceira_pagina p {
+    margin: 0; 
+    font-size: 1em;
+}
+
+footer{
+    background-color: #D9D9D9;
+    height: 70px;
+    align-items:end;
+    display:flex;
+    justify-content:flex-end;
+   
+   
+}
+
+footer p{
+    margin: 10px 30px 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-size: 15px;
+}
