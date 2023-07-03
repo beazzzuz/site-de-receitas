@@ -47,7 +47,7 @@ receitaDados.instructions.map((instructions, key)=>{
         instructionDiv.className = "direita";
     }
     const instructionLi = document.createElement('li');
-    instructionLi.innerHTML = "Modo de preparo"
+    instructionLi.innerHTML = "Step"
     const br = document.createElement('br');
     const p = document.createElement('p');
     p.innerHTML = instructions;
