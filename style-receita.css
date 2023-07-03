@@ -69,7 +69,8 @@ h1{
 }
 
 #fotoReceita img{
-    border-radius: 8px;   
+    border-radius: 8px;  
+    max-width: 50%; 
 }
 
 #ingredientes{ 
