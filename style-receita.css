@@ -1,21 +1,22 @@
 * {
     margin: 0;
     padding: 0;
-  
-  }
 
-body{
+}
+
+body {
     overflow-x: hidden;
 }
 
-header{
+header {
     margin: 0;
 }
-.container{
-    position: relative;   
+
+.container {
+    position: relative;
 }
 
-.cabecalho{
+.cabecalho {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -31,7 +32,7 @@ header{
     width: 100%;
 }
 
-.cabecalho p{
+.cabecalho p {
     display: flex;
     flex-wrap: wrap;
     margin: 10px;
@@ -39,74 +40,100 @@ header{
     text-align: center;
 }
 
-.cabecalho .barra_inicial a{
+.cabecalho .barra_inicial a {
     text-decoration: none;
     color: inherit;
 }
 
-h1{
+h1 {
     margin: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
+    font-family: 'Pacifico', cursive;
 }
 
-.primeirasecao{ 
+.primeirasecao {
     display: flex;
     width: 100%;
-    grid-template-columns: 2;
-    margin: 50px 0;
-    flex-wrap: wrap;    
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+
 }
 
-
-#fotoReceita{
-    width: 60%;
+#fotoReceita {
+    width: 100%;
     border-radius: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-#fotoReceita img{
-    border-radius: 8px;   
+#fotoReceita img {
+    width: 40%;
+    border-radius: 8px;
 }
 
-#ingredientes{ 
+.desc{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+    height: 80px;
+    justify-content: center;
+}
+.desc div {
+    align-items: center;
+    background-color: #D9D9D9;
+    width: 15%;
+    height: 40px;
+    margin: 40px;
+}
+
+.item{
+  width: 50%;
+  margin: auto;
+    align-items: center;
+    justify-content: center;
+    background-color: aqua;
+}
+
+#ingredientes {
     display: flex;
     flex-direction: column;
     flex: 1;
     width: auto;
-    margin-top:-50px;
+   margin: auto;
     justify-content: flex-start;
     align-items: flex-start;
 }
 
-#ingredientes h2{
-    text-align: left;
-    display: flex;
-    align-items: left;
-    text-align: center;
-    margin: 20px;
+.item li{
+    background-color: blueviolet;
+    margin: 5px;
+    font-size: 20px;
+    font-family: 'Raleway';
 }
 
-ol {
-    list-style-type: decimal;
-}
 
 #MeioPagina {
     background-color: #D9D9D9;
     padding: 10px 0;
+    margin: 50px 0px 100px 0px;
 }
 
 .segundasecao {
     display: flex;
-    margin: 75px;
+    width: 50%;
+    margin: auto;
 }
 
 .esquerda {
-    padding: 50px;
-    padding-right: 30%;
+    justify-content: flex-start;
+   margin: 10px;;
+    
+   
 }
 
 .direita {
@@ -114,29 +141,39 @@ ol {
     padding-left: 30%;
 }
 
-.segundasecao li{
+.segundasecao li {
     font-weight: bold;
 }
 
 
-#scroll{
+#scroll {
     height: 510px;
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: black transparent;   
+    scrollbar-color: black transparent;
+}
+.terceirasecao{
+    display: flex;
+    align-items: center;
+    width: 40%;
+    margin: auto;
+    height: 400px;
+    justify-content: center;
+    background-color: #D9D9D9;
 }
 
-footer{
+footer {
+    margin-top: 100px;
     background-color: #D9D9D9;
     height: 100px;
-    align-items:end;
-    display:flex;
-    justify-content:flex-end;
-   
-   
+    align-items: end;
+    display: flex;
+    justify-content: flex-end;
+
+
 }
 
-footer p{
+footer p {
     margin: 10px 30px 20px 0px;
     display: flex;
     flex-wrap: wrap;
