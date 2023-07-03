@@ -65,10 +65,15 @@ header{
 .primeirasecao div{
     background-color: #D9D9D9;
     margin: 5px;
-    height: 5rem;
-    width: 5rem;
+    height: 9.375rem;
+    width: 9.375rem;
     border-radius: 80px;
     cursor: pointer;
+}
+.primeirasecao div img{
+     height: 9.375rem;
+    width: 9.375rem;
+    border-radius: 80px;
 }
 
 #tipo1{
@@ -87,11 +92,16 @@ header{
     background-image: url("./img/tipo5.png");
 }
 
-.tipos{
-    margin: auto;
+.tipos {
     display: flex;
-    justify-content: center;
-    justify-content:space-around;
+    align-items: center;
+    
+}
+
+.tipos p{
+    width:50%;
+    margin:5px;
+    text-align: center;
     font-size: 20px;
 }
 
