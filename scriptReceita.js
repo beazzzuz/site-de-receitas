@@ -1,4 +1,4 @@
-import receitas from './utils/allrecipes-receitas.json' assert {type: 'json'};
+// import receitas from './utils/allrecipes-receitas.json' assert {type: 'json'};
 
 //Pega o parametro da URL
 
@@ -10,15 +10,20 @@ const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id');
 
 //pegando exatamente o produto com esse id:
-let receitaDados;
 
+async function fetchData(){
+    await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`).then(response => response.json())
+    .then((data)=>{
+        const receitaDados=data.meals[0];
+        console.log(receitaDados); 
+        loadItens(receitaDados);
+    })
+    .catch(error => {
+        console.log('Ocorreu um erro:', error);
+    });
+}
 
-receitas.map((receita, key)=>{
-    if(key == id){
-        //agora pode trabalhar com os dados da receita pela variavel receitaDados
-        receitaDados = receita;
-    }
-})
+fetchData();
 
 const tituloDiv = document.querySelector(".titulo");
 const nomeReceita = document.createElement('h1');
@@ -47,7 +52,7 @@ receitaDados.instructions.map((instructions, key)=>{
         instructionDiv.className = "direita";
     }
     const instructionLi = document.createElement('li');
-    instructionLi.innerHTML = "Step"
+    instructionLi.innerHTML = "Modo de preparo"
     const br = document.createElement('br');
     const p = document.createElement('p');
     p.innerHTML = instructions;
@@ -58,5 +63,3 @@ receitaDados.instructions.map((instructions, key)=>{
     preparoOl.appendChild(instructionDiv);
 })
 
-
-console.log(receitaDados);

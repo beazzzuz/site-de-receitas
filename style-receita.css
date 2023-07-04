@@ -70,9 +70,9 @@ h1 {
     align-items: center;
 }
 
-#fotoReceita img {
-    width: 40%;
-    border-radius: 8px;
+#fotoReceita img{
+    border-radius: 8px;  
+    max-width: 50%; 
 }
 
 .desc{
