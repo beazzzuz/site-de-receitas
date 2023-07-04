@@ -6,7 +6,9 @@
 //Load nas receitas
 let quadroReceitas = document.querySelector(".quadrodereceitas");
 
-for(let i=0; i<10; i++){
+let itensPorPagina = 20;
+
+for(let i=0; i<itensPorPagina; i++){
   fetch('https://www.themealdb.com/api/json/v1/1/random.php')
   .then(response => response.json())
   .then(data => {
