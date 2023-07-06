@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
 body{
@@ -13,11 +14,16 @@ body h1{
 }
 
 header{
+    background-image: url("./img/bannerprincipal.png");
     margin:0;
+    height: 600px;
+    
+
+
 }
 
 .container{
-    position: relative;   
+    position: relative;
 }
 
 #gambiarra {
@@ -25,13 +31,13 @@ header{
     height: 10vh;
     background-color: #E4C05A;
   }
-  
+
   @media (max-width: 768px) {
     #gambiarra {
       height: 5vh;
     }
   }
-  
+
 .cabecalho {
     display: flex;
     flex-direction: column;
@@ -41,32 +47,35 @@ header{
     left: 0;
     right: 0;
   }
-  
+
   .cabecalho .barra_inicial {
     display: flex;
     justify-content: flex-start;
     width: 100%;
   }
-  
+
   .cabecalho .barra_inicial p {
     margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
     font-size: 20px;
   }
-  
+
   .cabecalho h1 {
     font-size: 5vw;
     margin-top: 5%;
     white-space: nowrap;
     text-align: center;
   }
-  
+
   .primeirasecao {
     margin: 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
-  
+
   .primeirasecao div {
     background-color: #D9D9D9;
     margin: 5px;
@@ -75,29 +84,29 @@ header{
     border-radius: 50%;
     cursor: pointer;
   }
-  
+
   .primeirasecao div img {
     height: 9.375rem;
     width: 9.375rem;
     border-radius: 50%;
   }
-  
+
   @media (max-width: 768px) {
     .cabecalho h1 {
       font-size: 8vw;
     }
-    
+
     .primeirasecao div {
       height: 6.25rem;
       width: 6.25rem;
     }
-  
+
     .primeirasecao div img {
       height: 6.25rem;
       width: 6.25rem;
     }
   }
-  
+
 
 #tipo1{
     background-image: url("./img/tipo1.png");
@@ -118,7 +127,7 @@ header{
 .tipos {
     display: flex;
     align-items: center;
-    
+
 }
 
 .tipos p{
@@ -153,6 +162,7 @@ hr{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    
 }
 
 #b1{
@@ -239,7 +249,7 @@ hr{
 }
 
 .carousel-item {
-    flex: 0 0 calc(100% / 3 - 34px);     
+    flex: 0 0 calc(100% / 3 - 34px);
     height: 500px;
     margin: 10px 0;
     background-color: #f5f5f5;
@@ -284,8 +294,8 @@ hr{
 .next-btn {
     right: 10px;
 }
-  
-  
+
+
 .quartasecao{
     display: flex;
     justify-content: center;
@@ -302,7 +312,7 @@ hr{
     flex-wrap: wrap;
     margin-top: 85rem;
   }
-  
+
   @media (max-width: 768px) {
     .quadrodereceitas {
       width: 90%;
@@ -352,16 +362,17 @@ hr{
     width: 100px;;
 }
 #scroll{
-    height: 600px;
+    height: 1200px;
+    max-width: 1300px;
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: black transparent;   
-    max-height: 400px; 
+    scrollbar-color: black transparent;
+     max-height: 1000px;/* Cabe exatamente 30 elementos (que foi definido no js) */
     overflow-y: scroll;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 footer{
@@ -382,4 +393,3 @@ footer p{
 
 
 
-  
