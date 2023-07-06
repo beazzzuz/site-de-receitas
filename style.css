@@ -13,10 +13,11 @@ body h1{
     text-align:center;
 }
 
-header{
+.parallax{
     background-image: url("./img/bannerprincipal.png");
     margin:0;
     height: 600px;
+    background-attachment: fixed;
 }
 
 .container{
@@ -25,13 +26,9 @@ header{
 
 .cabecalho {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-  }
+    justify-content: center;
+    font-size: 128px;
+}
 
   .cabecalho .barra_inicial {
     display: flex;
@@ -113,81 +110,32 @@ hr{
     background-color: #D9D9D9;
     margin: 20px;
 }
-
-.segundasecao{
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.segundasecao {
+	width: 80%;
+	margin: 0 auto;
+	line-height: 0;
+	position: relative;
 }
-
-.banner{
-    height: 40rem;
-    margin: 30px;
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    
+.segundasecao img {
+	width: 100%;
 }
-
-#b1{
-   background-color: #D9D9D9;
-   height: 93.33%;
-   width: 40%;
-   align-self: flex-start;
-   margin: 5px 5px 0 5px;
-   background-image: url("./img/banner1.png");
+.segundasecao article {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background: white;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	mix-blend-mode: lighten;
 }
-
-.alinhabanner{
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 0px;
-    margin: 0px;
-    width: 80%;
-    height: 93.33%;
+.segundasecao div {
+    background-color:black;
+	height: 25.8vw;
 }
-
-#b2b3{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    height: 50%;
-    width: 100%;
-    margin-top: 5px;
-    margin-bottom: 5px;
+.segundasecao div:nth-of-type(2) {
+	grid-column: 2 / 4;
 }
-
-#b2 {
-    background-image: url("./img/banner2.png");
-}
-
-#b3 {
-    background-image: url("./img/banner3.png");
-}
-#b2, #b3{
-   background-color: #D9D9D9;
-   height: 100%;
-   width: 100%;
-   margin: 5px 5px 5px 5px;
-}
-
-#divb4{
-    height: 48.55%;
-    width: 100%;
-    margin: 5px 5px 5px 5px;
-}
-#b4{
-    background-color: #D9D9D9;
-    height: 100%;
-    width: 100%;
-    background-image: url("./img/banner4.png");
- }
 
 .terceirasecao{
     display: flex;
@@ -359,14 +307,14 @@ hr{
 
 footer{
     background-color: #E4C05A;
-    height: 10em;
+    height: 5em;
     align-items:end;
     display:flex;
     justify-content:flex-end;
 }
 
-footer p{
-    margin: 2em 10em 4em 0em;
+footer p{ 
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
