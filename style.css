@@ -16,9 +16,6 @@ header{
     background-image: url("./img/bannerprincipal.png");
     margin:0;
     height: 600px;
-    
-
-
 }
 
 header h1{
@@ -65,23 +62,6 @@ header h1{
     width: 9.375rem;
     border-radius: 50%;
   }
-  
-  @media (max-width: 768px) {
-    .cabecalho h1 {
-      font-size: 8vw;
-    }
-    
-    .primeirasecao div {
-      height: 6.25rem;
-      width: 6.25rem;
-    }
-  
-    .primeirasecao div img {
-      height: 6.25rem;
-      width: 6.25rem;
-    }
-  }
-  
 
 #tipo1{
     background-image: url("./img/tipo1.png");
@@ -287,15 +267,6 @@ hr{
     flex-wrap: wrap;
     margin-top: 85rem;
   }
-  
-  @media (max-width: 768px) {
-    .quadrodereceitas {
-      width: 90%;
-      flex-direction: column;
-      align-items: stretch;
-      justify-content: flex-start;
-    }
-  }
 
 .quadrodereceitas .receitaDiv{
     border: 3px solid #afaaaa;
@@ -347,6 +318,31 @@ hr{
     flex-direction: column; 
     justify-content: center; 
     align-items: center; 
+}
+
+@media (max-width: 768px) {
+    .cabecalho h1 {
+      font-size: 8vw;
+    }
+    
+    .primeirasecao div {
+      height: 6.25rem;
+      width: 6.25rem;
+    }
+  
+    .primeirasecao div img {
+      height: 6.25rem;
+      width: 6.25rem;
+    }
+    
+    .quadrodereceitas {
+      width: 90%;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
+
+    
 }
 
 footer{
