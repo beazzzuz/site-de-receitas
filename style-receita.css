@@ -72,7 +72,7 @@ h1 {
 
 #fotoReceita img {
     width: 40%;
-    border-radius: 8px;
+    border-radius: 20px;
 }
 
 .desc{
@@ -81,14 +81,17 @@ h1 {
     width: 40%;
     margin: auto;
     height: 80px;
-    justify-content: center;
+    justify-content: space-around;
 }
 .desc div {
+    display: flex;
     align-items: center;
-    background-color: #D9D9D9;
-    width: 15%;
-    height: 40px;
-    margin: 40px;
+    justify-content: center;
+    background-color: #EBF7FF;
+    width: 20%;
+    height: 80%;
+    margin: 0px;
+    border-radius: 10px;
 }
 
 .item{
@@ -104,7 +107,7 @@ h1 {
     flex-direction: column;
     flex: 1;
     width: auto;
-   margin: auto;
+    margin: auto;
     justify-content: flex-start;
     align-items: flex-start;
 }
@@ -125,20 +128,19 @@ h1 {
 
 .segundasecao {
     display: flex;
-    width: 50%;
+    width: 80%;
     margin: auto;
 }
 
 .esquerda {
     justify-content: flex-start;
-   margin: 10px;;
-    
-   
+    margin: 10px;;
+    padding-right: 50%;
 }
 
 .direita {
     padding: 50px;
-    padding-left: 30%;
+    padding-left: 50%;
 }
 
 .segundasecao li {
@@ -164,13 +166,11 @@ h1 {
 
 footer {
     margin-top: 100px;
-    background-color: #D9D9D9;
+    background-color: #E4C05A;
     height: 100px;
     align-items: end;
     display: flex;
     justify-content: flex-end;
-
-
 }
 
 footer p {

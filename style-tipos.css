@@ -74,13 +74,11 @@ header{
 }
 
 footer{
-    background-color: #D9D9D9;
+    background-color: #E4C05A;
     height: 70px;
     align-items:end;
     display:flex;
     justify-content:flex-end;
-   
-   
 }
 
 footer p{

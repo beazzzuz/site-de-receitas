@@ -322,13 +322,11 @@ hr{
 }
 
 footer{
-    background-color: #D9D9D9;
+    background-color: #E4C05A;
     height: 100px;
     align-items:end;
     display:flex;
     justify-content:flex-end;
-   
-   
 }
 
 footer p{
