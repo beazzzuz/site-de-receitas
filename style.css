@@ -13,12 +13,15 @@ body h1{
     text-align:center;
 }
 
-.parallax{
+.parallax {
     background-image: url("./img/bannerprincipal.png");
-    margin:0;
+    margin: 0;
     height: 600px;
     background-attachment: fixed;
-}
+    background-size: contain; 
+    background-position: top center;
+    background-repeat: no-repeat;
+}    
 
 .container{
     position: relative;
@@ -30,48 +33,48 @@ body h1{
     font-size: 128px;
 }
 
-  .cabecalho .barra_inicial {
+.cabecalho .barra_inicial {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-  }
+}
 
-  .cabecalho .barra_inicial p {
+.cabecalho .barra_inicial p {
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     font-size: 20px;
-  }
+    }
 
-  .cabecalho h1 {
+.cabecalho h1 {
     font-size: 5vw;
     margin-top: 5%;
     white-space: nowrap;
     text-align: center;
-  }
+}
 
-  .primeirasecao {
+.primeirasecao {
     margin: 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
-  }
+}
 
-  .primeirasecao div {
+.primeirasecao div {
     background-color: #D9D9D9;
     margin: 5px;
     height: 9.375rem;
     width: 9.375rem;
     border-radius: 50%;
     cursor: pointer;
-  }
+}
 
-  .primeirasecao div img {
+.primeirasecao div img {
     height: 9.375rem;
     width: 9.375rem;
     border-radius: 50%;
-  }
+}
   
 #tipo1{
     background-image: url("./img/tipo1.png");
@@ -101,6 +104,7 @@ body h1{
     text-align: center;
     font-size: 20px;
 }
+
 .link-texto-tipos{
     color: black;
     text-decoration: none;
@@ -110,6 +114,7 @@ hr{
     background-color: #D9D9D9;
     margin: 20px;
 }
+
 .segundasecao {
 	width: 80%;
 	margin: 0 auto;
@@ -211,7 +216,6 @@ hr{
     right: 10px;
 }
 
-
 .quartasecao{
     display: flex;
     justify-content: center;
@@ -283,26 +287,131 @@ hr{
 }
 
 @media (max-width: 768px) {
-    .cabecalho h1 {
-      font-size: 8vw;
+    
+    .parallax {
+        background-image: url("./img/bannerprincipal.png");
+        margin: 0;
+        height: 110px;
+        background-attachment: fixed;
+        background-size: contain; /* Tornar a imagem responsiva */
+        background-position: center; /* Centralizar a imagem */
+    }
+
+    .primeirasecao {
+        margin: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .primeirasecao div {
+        background-color: #D9D9D9;
+        margin: 5px;
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+
+    .primeirasecao div img {
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50%;
+    }
+
+    .tipos {
+        display: flex;
+        align-items: center;
     }
     
-    .primeirasecao div {
-      height: 6.25rem;
-      width: 6.25rem;
+    .tipos p{
+        width: 100%;
+        margin: 5px;
+        text-align: center;
+        font-size: 10px;
     }
-  
-    .primeirasecao div img {
-      height: 6.25rem;
-      width: 6.25rem;
+
+    .segundasecao {
+        width: 80%;
+        margin: 0 auto;
+        line-height: 0;
+        position: relative;
+    }
+
+    .segundasecao img {
+        width: 100%;
+    }
+    
+    .segundasecao article {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        background: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 20px;
+        mix-blend-mode: lighten;
+    }
+    .segundasecao div {
+        background-color:black;
+        height: 24.1vw;
+    }
+    .segundasecao div:nth-of-type(2) {
+        grid-column: 2 / 4;
+    }
+
+    .terceirasecao{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 50px;
+    }
+    
+    .terceirasecao div{
+        width: 50%;
+        margin-bottom:10px;
+        margin-top:10px;
+    }
+
+    /* 
+    .carousel-inner {
+        display: flex;
+        transition: transform 0.5s ease;
+        gap:2em;
+        margin: 0 20px;
+    }
+    
+    .carousel-item {
+        flex: 0 0 calc(100% / 3 - 34px);
+        height: 250px;
+        margin: 10px 0;
+        background-color: #f5f5f5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 24px;
+        border-radius: 0.5em;
+        box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.5);
+    }
+    
+        Barbosa arruma por favor
+    */
+
+    .quartasecao{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        margin: 50px 60px 0 60px;
     }
     
     .quadrodereceitas {
-      width: 90%;
+      width: auto;
       flex-direction: column;
-      align-items: stretch;
+      align-items: center;
       justify-content: flex-start;
     }
+    
 }
 
 footer{
