@@ -88,11 +88,14 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #EBF7FF;
+    /* background-color:  */
+    box-shadow: 5px 5px #d0dbe2;
     width: 10%;
     height: 80%;
     margin: 10px;
     border-radius: 10px;
+    gap:10px;
+    padding: 0 5px;
 }
 
 .item{
