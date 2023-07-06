@@ -53,7 +53,8 @@ h1 {
     font-size: 50px;
     align-items: center;
     justify-content: center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'lilita one', cursive;
+    text-transform: uppercase;
 }
 .titulo h1{
     margin-top:-8%;
