@@ -8,42 +8,44 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    margin: 0;
+.parallax{
+    background-image: url("./img/b2.png");
+    margin:0;
+    height: 400px;
+    background-attachment: fixed;
+    
 }
 
-.container {
+.container{
     position: relative;
 }
 
 .cabecalho {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    justify-content: center;
+    font-size: 128px;
 }
 
-.cabecalho .barra_inicial {
+  .cabecalho .barra_inicial {
     display: flex;
     justify-content: flex-start;
     width: 100%;
-}
+  }
 
-.cabecalho p {
+  .cabecalho .barra_inicial p {
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
-    margin: 10px;
+    align-content: space-between;
     font-size: 20px;
-    text-align: center;
-}
+  }
 
-.cabecalho .barra_inicial a {
-    text-decoration: none;
-    color: inherit;
-}
+  .cabecalho h1 {
+    font-size: 5vw;
+    margin-top: 5%;
+    white-space: nowrap;
+    text-align: center;
+  }
 
 h1 {
     margin: 20px;
@@ -51,7 +53,12 @@ h1 {
     font-size: 50px;
     align-items: center;
     justify-content: center;
-    font-family: 'Pacifico', cursive;
+    font-family: 'lilita one', cursive;
+    text-transform: uppercase;
+}
+.titulo h1{
+    margin-top:-8%;
+    font-size: 60px;
 }
 
 .primeirasecao {
@@ -69,6 +76,7 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -20%;
 }
 
 #fotoReceita img {
@@ -82,6 +90,7 @@ h1 {
     align-items: center;
     margin: 100px;
     height: 80px;
+    margin-top: -1%;
     justify-content: center;
 }
 .desc div {
@@ -144,6 +153,7 @@ h1 {
 
 .ingtext-true{
     text-decoration: line-through;
+    color: rgb(73, 70, 70);
 }
 
 #MeioPagina {

@@ -41,7 +41,7 @@ function loadItens(receitaDados){
     let category = document.querySelector("#category > p");
     category.innerHTML = receitaDados.strCategory;
     let serving = document.querySelector("#serving > p");
-    let num = parseInt(Math.random() * (4 - 1 + 1));
+    let num = parseInt(Math.random() * (4 - 0 + 1));
     serving.innerHTML = num == 1?`${num} pessoa`:`${num} pessoas`;
 
     

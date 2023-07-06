@@ -411,18 +411,7 @@ hr{
       align-items: center;
       justify-content: flex-start;
     }
-
-    .quadrodereceitas .receitaDiv{
-        border: 3px solid #afaaaa;
-        border-radius: 8px;
-        height: 135.59px;
-        width: 16rem;
-        margin:10px;
-        display: flex;
-        cursor: pointer;
-    }
     
-
 }
 
 footer{

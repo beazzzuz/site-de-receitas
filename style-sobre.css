@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+  
+  }
+
+body{
+    overflow-x:hidden;
+}
+
+header{
+    margin: 0;
+}
+
+.container{
+    position: relative;   
+}.cabecalho{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.cabecalho .barra_inicial {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.cabecalho p{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px;
+    font-size: 20px;
+    text-align: center;
+}
+
+.cabecalho .barra_inicial a{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer {
+    margin-top: 100px;
+    background-color: #E4C05A;
+    height: 100px;
+    align-items: end;
+    display: flex;
+    justify-content: flex-end;
+}
+
+footer p {
+    margin: 10px 30px 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-size: 20px;
+}
