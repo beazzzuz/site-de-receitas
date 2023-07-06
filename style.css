@@ -127,6 +127,10 @@ header{
     text-align: center;
     font-size: 20px;
 }
+.link-texto-tipos{
+    color: black;
+    text-decoration: none;
+}
 
 hr{
     background-color: #D9D9D9;
