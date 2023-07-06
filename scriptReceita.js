@@ -41,16 +41,49 @@ function loadItens(receitaDados){
     for(let i=1; i<=ingredFromApi;i++){
         let ingredientKey = 'strIngredient' + i;
         let ingredient = receitaDados[ingredientKey];
+        const text = document.createElement('p');
+        text.className ="ingtext";
+
         if (ingredient != ""){
             const input = document.createElement("input");
             input.type='checkbox';
-            input.className = 'hidden-box';
-            input.id = ingredient.id;
+            input.checked=false;
+            input.addEventListener('click', ()=>{
+                if(input.checked!=true){
+                    text.className="ingtext"
+                }else{
+                    text.className="ingtext-true"
+                }
+                 
+            });   
+            
+           text.addEventListener('click', ()=>{
+            
+                if(input.checked!=true){
+                    text.className="ingtext-true"
+                    input.checked=true;
+                    
+                }else{
+                    
+                    text.className="ingtext"
+                    input.checked=false;
+                }
 
+                 
+            });   
+           
             const ingredientLi = document.createElement('li');
-            ingredientLi.innerHTML = ingredient;
+            
+            
+
+            text.innerHTML = ingredient;
             receitasOl.appendChild(ingredientLi);
-            receitasOl.appendChild(input);
+            ingredientLi.appendChild(input);
+            ingredientLi.appendChild(text);
+            
+           
+            
+            
         }
     }
     //Para cada instrução a lógica foi quebrar a string vindo da api, baseado na formatação da resposta, caso venha com 1 texto.. 2 texto... ou somente um texto solto

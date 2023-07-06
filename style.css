@@ -13,45 +13,34 @@ body h1{
 }
 
 header{
+    background-image: url("./img/bannerprincipal.png");
     margin:0;
+    height: 600px;
+    
+
+
 }
 
-.container{
-    position: relative;   
-}
-
-#gambiarra{
-    width: 100%;
-    height: 100px;
-    background-color: #E4C05A;
-}
-
-.cabecalho {
+header h1{
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    justify-content: center;
+    font-size: 128px;
+
 }
 
-.cabecalho .barra_inicial {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
+.cabecalho{
+    display:flex;
+    justify-content:flex-start;
+    height: 200px;
+    margin-right: 30px;
 }
 
-.cabecalho .barra_inicial p {
+.cabecalho p{
     margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
     font-size: 20px;
-}
-
-.cabecalho h1 {
-    font-size: 110px;
-    margin-top: 5%;
-    white-space: nowrap;
-    text-align: center;
 }
 
 .primeirasecao{
@@ -126,6 +115,7 @@ hr{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    
 }
 
 #b1{
