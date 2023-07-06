@@ -52,7 +52,7 @@ function loadItens(receitaDados){
         let ingredient = receitaDados[ingredientKey];
         const text = document.createElement('p');
         text.className ="ingtext";
-
+        text.innerHTML = ingredient;
         if (ingredient != ""){
             const input = document.createElement("input");
             input.type='checkbox';
@@ -63,42 +63,34 @@ function loadItens(receitaDados){
                 }else{
                     text.className="ingtext-true"
                 }
-                 
-            });   
-            
-           text.addEventListener('click', ()=>{
-            
+
+            });  
+            text.addEventListener('click', ()=>{
+
                 if(input.checked!=true){
                     text.className="ingtext-true"
                     input.checked=true;
-                    
+
                 }else{
-                    
+
                     text.className="ingtext"
                     input.checked=false;
                 }
 
-                 
-            });   
-           
-            const ingredientLi = document.createElement('li');
-            
-            
 
-            text.innerHTML = ingredient;
+            });
+            const ingredientLi = document.createElement('li');
             receitasOl.appendChild(ingredientLi);
             ingredientLi.appendChild(input);
             ingredientLi.appendChild(text);
-            
-           
-            
-            
+
+
+
         }
     }
-
-
-
     //Para cada instrução a lógica foi quebrar a string vindo da api, baseado na formatação da resposta, caso venha com 1 texto.. 2 texto... ou somente um texto solto
+
+    let instructionsArray
     if(receitaDados.strInstructions[0] == "1"){
         instructionsArray = receitaDados.strInstructions.split(/\n\d+\s/).filter(Boolean);
     }else{
@@ -112,20 +104,18 @@ function loadItens(receitaDados){
             }else{
                 instructionDiv.className = "direita";
             }
-           
-            
-
             const instructionLi = document.createElement('li');
             instructionLi.innerHTML = "Modo de preparo"
-    
+
             const br = document.createElement('br');
             const p = document.createElement('p');
             p.innerHTML = instructionsArray[i];
-            
+
             instructionDiv.appendChild(instructionLi);
             instructionDiv.appendChild(br);
             instructionDiv.appendChild(p);
             preparoOl.appendChild(instructionDiv);
         }
+
 
 }
