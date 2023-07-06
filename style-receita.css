@@ -147,11 +147,12 @@ h1 {
 }
 
 .ingtext{
-    color: pink;
+    color: rgb(0, 0, 0);
 }
 
 .ingtext-true{
     text-decoration: line-through;
+    color: rgb(73, 70, 70);
 }
 
 #MeioPagina {
