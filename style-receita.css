@@ -9,7 +9,7 @@ body {
 }
 
 .parallax{
-    background-image: url("./img/b2.png");
+    background-image: url("./img/bannerseg2.png");
     margin:0;
     height: 400px;
     background-attachment: fixed;
@@ -29,14 +29,13 @@ body {
   .cabecalho .barra_inicial {
     display: flex;
     justify-content: flex-start;
+    flex-direction: row;
     width: 100%;
   }
 
   .cabecalho .barra_inicial p {
-    margin: 10px;
+    margin: 5px;
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
     font-size: 20px;
   }
 
@@ -46,6 +45,8 @@ body {
     white-space: nowrap;
     text-align: center;
   }
+ 
+  
 
 h1 {
     margin: 20px;
@@ -54,7 +55,8 @@ h1 {
     align-items: center;
     justify-content: center;
     font-family: 'lilita one', cursive;
-    text-transform: uppercase;
+    
+    
 }
 .titulo h1{
     margin-top:-8%;
@@ -116,7 +118,7 @@ h1 {
     width: 100%;
     max-width: 500px;
     border-radius: 6px;
-    box-shadow: 10px 10px 0  rgba(0,0,0,0.1);
+    box-shadow: 10px 10px 0  rgba(0,0,0,0.07);
     list-style: none;
     overflow: hidden;
 }
@@ -157,7 +159,7 @@ h1 {
 }
 
 #MeioPagina {
-    background-color: rgba(0,0,0,0.1);
+    background-color: #ede7dc;
     padding: 10px 0;
     margin: 50px 0px 100px 0px;
 }
@@ -171,7 +173,10 @@ h1 {
 }
 
 .segundasecao li{
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'lilita one', cursive;
+    text-transform: uppercase;
+    font-size: 25px;
+    color:#F7941D;
 }
 
 .esquerda {
