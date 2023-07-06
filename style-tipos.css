@@ -331,10 +331,13 @@ footer{
     }
 }
 
-footer p{
-    margin: 10px 30px 20px 0px;
+footer {
+    margin-top: 100px;
+    background-color: #E4C05A;
+    height: 100px;
+    color: black;
+    text-align: center;
     display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    font-size: 15px;
+    align-items: center;
+    justify-content: center;
 }

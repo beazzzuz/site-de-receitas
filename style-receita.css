@@ -207,23 +207,6 @@ h1 {
     background-color: #D9D9D9;
 }
 
-footer {
-    margin-top: 100px;
-    background-color: #E4C05A;
-    height: 100px;
-    align-items: end;
-    display: flex;
-    justify-content: flex-end;
-}
-
-footer p {
-    margin: 10px 30px 20px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
-    font-size: 20px;
-}
-
 @media (max-width: 768px) {
     
     h1 {
@@ -296,6 +279,17 @@ footer p {
         margin: 3rem 0 3rem 0;
         
     }
+}
+
+footer {
+    margin-top: 100px;
+    background-color: #E4C05A;
+    height: 100px;
+    color: black;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 
