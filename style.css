@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
 body{
@@ -17,41 +18,46 @@ body h1{
     margin:0;
     height: 600px;
     background-attachment: fixed;
-  
-    
 }
 
-header h1{
+.container{
+    position: relative;
+}
+
+.cabecalho {
     display: flex;
     justify-content: center;
     font-size: 128px;
-    
-
 }
 
-.cabecalho{
-    display:flex;
-    justify-content:flex-start;
-    height: 200px;
-    margin-right: 30px;
-}
+  .cabecalho .barra_inicial {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+  }
 
-.cabecalho p{
+  .cabecalho .barra_inicial p {
     margin: 10px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
     font-size: 20px;
-}
+  }
 
-.primeirasecao{
-    
+  .cabecalho h1 {
+    font-size: 5vw;
+    margin-top: 5%;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .primeirasecao {
     margin: 10px;
     display: flex;
     align-items: center;
     justify-content: space-around;
   }
-  
+
   .primeirasecao div {
     background-color: #D9D9D9;
     margin: 5px;
@@ -60,30 +66,13 @@ header h1{
     border-radius: 50%;
     cursor: pointer;
   }
-  
+
   .primeirasecao div img {
     height: 9.375rem;
     width: 9.375rem;
     border-radius: 50%;
   }
   
-  @media (max-width: 768px) {
-    .cabecalho h1 {
-      font-size: 8vw;
-    }
-    
-    .primeirasecao div {
-      height: 6.25rem;
-      width: 6.25rem;
-    }
-  
-    .primeirasecao div img {
-      height: 6.25rem;
-      width: 6.25rem;
-    }
-  }
-  
-
 #tipo1{
     background-image: url("./img/tipo1.png");
 }
@@ -103,7 +92,7 @@ header h1{
 .tipos {
     display: flex;
     align-items: center;
-    
+
 }
 
 .tipos p{
@@ -176,7 +165,7 @@ hr{
 }
 
 .carousel-item {
-    flex: 0 0 calc(100% / 3 - 34px);     
+    flex: 0 0 calc(100% / 3 - 34px);
     height: 500px;
     margin: 10px 0;
     background-color: #f5f5f5;
@@ -221,8 +210,8 @@ hr{
 .next-btn {
     right: 10px;
 }
-  
-  
+
+
 .quartasecao{
     display: flex;
     justify-content: center;
@@ -238,15 +227,6 @@ hr{
     justify-content: space-between;
     flex-wrap: wrap;
     margin-top: 85rem;
-  }
-  
-  @media (max-width: 768px) {
-    .quadrodereceitas {
-      width: 90%;
-      flex-direction: column;
-      align-items: stretch;
-      justify-content: flex-start;
-    }
   }
 
 .quadrodereceitas .receitaDiv{
@@ -289,16 +269,40 @@ hr{
     width: 100px;;
 }
 #scroll{
-    height: 600px;
+    height: 1200px;
+    max-width: 1300px;
     overflow-y: scroll;
     scrollbar-width: thin;
-    scrollbar-color: black transparent;   
-    max-height: 400px; 
+    scrollbar-color: black transparent;
+     max-height: 1000px;/* Cabe exatamente 30 elementos (que foi definido no js) */
     overflow-y: scroll;
-    display: flex; 
-    flex-direction: column; 
-    justify-content: center; 
-    align-items: center; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .cabecalho h1 {
+      font-size: 8vw;
+    }
+    
+    .primeirasecao div {
+      height: 6.25rem;
+      width: 6.25rem;
+    }
+  
+    .primeirasecao div img {
+      height: 6.25rem;
+      width: 6.25rem;
+    }
+    
+    .quadrodereceitas {
+      width: 90%;
+      flex-direction: column;
+      align-items: stretch;
+      justify-content: flex-start;
+    }
 }
 
 footer{
@@ -319,4 +323,3 @@ footer p{
 
 
 
-  
