@@ -42,9 +42,15 @@ function loadItens(receitaDados){
         let ingredientKey = 'strIngredient' + i;
         let ingredient = receitaDados[ingredientKey];
         if (ingredient != ""){
+            const input = document.createElement("input");
+            input.type='checkbox';
+            input.className = 'hidden-box';
+            input.id = ingredient.id;
+
             const ingredientLi = document.createElement('li');
             ingredientLi.innerHTML = ingredient;
             receitasOl.appendChild(ingredientLi);
+            receitasOl.appendChild(input);
         }
     }
     //Para cada instrução a lógica foi quebrar a string vindo da api, baseado na formatação da resposta, caso venha com 1 texto.. 2 texto... ou somente um texto solto
@@ -62,6 +68,9 @@ function loadItens(receitaDados){
             }else{
                 instructionDiv.className = "direita";
             }
+           
+            
+
             const instructionLi = document.createElement('li');
             instructionLi.innerHTML = "Modo de preparo"
     
