@@ -1,4 +1,4 @@
-import receitas from './utils/allrecipes-receitas.json' assert {type: 'json'};
+// import receitas from './utils/allrecipes-receitas.json' assert {type: 'json'};
 
 //Pega o parametro da URL
 
@@ -10,53 +10,69 @@ const urlParams = new URLSearchParams(queryString);
 const id = urlParams.get('id');
 
 //pegando exatamente o produto com esse id:
-let receitaDados;
 
+async function fetchData(){
+    await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`).then(response => response.json())
+    .then((data)=>{
+        const receitaDados=data.meals[0];
+        console.log(receitaDados); 
+        loadItens(receitaDados);
+    })
+    .catch(error => {
+        console.log('Ocorreu um erro:', error);
+    });
+}
 
-receitas.map((receita, key)=>{
-    if(key == id){
-        //agora pode trabalhar com os dados da receita pela variavel receitaDados
-        receitaDados = receita;
+fetchData();
+
+function loadItens(receitaDados){
+    const tituloDiv = document.querySelector(".titulo");
+    const nomeReceita = document.createElement('h1');
+    nomeReceita.innerHTML = receitaDados.strMeal;
+    tituloDiv.appendChild(nomeReceita);
+    
+    const receitaImg = document.getElementById('receitaImg');
+    receitaImg.src=receitaDados.strMealThumb;
+    
+    const receitasOl = document.querySelector('.ingredientesOl');
+
+    //essa api retorna as receitas fora de um array, então vou ter que contornar isso
+    let ingredFromApi = 20;
+    for(let i=1; i<=ingredFromApi;i++){
+        let ingredientKey = 'strIngredient' + i;
+        let ingredient = receitaDados[ingredientKey];
+        if (ingredient != ""){
+            const ingredientLi = document.createElement('li');
+            ingredientLi.innerHTML = ingredient;
+            receitasOl.appendChild(ingredientLi);
+        }
     }
-})
-
-const tituloDiv = document.querySelector(".titulo");
-const nomeReceita = document.createElement('h1');
-nomeReceita.innerHTML = receitaDados.title;
-tituloDiv.appendChild(nomeReceita);
-
-
-const receitaImg = document.getElementById('receitaImg');
-receitaImg.src=receitaDados.photo_url;
-
-
-const receitasOl = document.querySelector('.ingredientesOl');
-receitaDados.ingredients.map((ingredient, key)=>{
-    const ingredientLi = document.createElement('li');
-    ingredientLi.innerHTML = ingredient;
-    receitasOl.appendChild(ingredientLi);
-})
-
-
-const preparoOl = document.querySelector(".preparoOl");
-receitaDados.instructions.map((instructions, key)=>{
-    const instructionDiv = document.createElement('div');
-    if(key%2==0){
-        instructionDiv.className = "esquerda";
+    //Para cada instrução a lógica foi quebrar a string vindo da api, baseado na formatação da resposta, caso venha com 1 texto.. 2 texto... ou somente um texto solto
+    let instructionsArray
+    if(receitaDados.strInstructions[0] == "1"){
+        instructionsArray = receitaDados.strInstructions.split(/\n\d+\s/).filter(Boolean);
     }else{
-        instructionDiv.className = "direita";
+        instructionsArray = receitaDados.strInstructions.split(/\. /);
     }
-    const instructionLi = document.createElement('li');
-    instructionLi.innerHTML = "Step"
-    const br = document.createElement('br');
-    const p = document.createElement('p');
-    p.innerHTML = instructions;
+        for(let i = 0; i<instructionsArray.length; i++){
+            const preparoOl = document.querySelector(".preparoOl");
+            const instructionDiv = document.createElement('div');
+            if(i%2==0){
+                instructionDiv.className = "esquerda";
+            }else{
+                instructionDiv.className = "direita";
+            }
+            const instructionLi = document.createElement('li');
+            instructionLi.innerHTML = "Modo de preparo"
+    
+            const br = document.createElement('br');
+            const p = document.createElement('p');
+            p.innerHTML = instructionsArray[i];
+            
+            instructionDiv.appendChild(instructionLi);
+            instructionDiv.appendChild(br);
+            instructionDiv.appendChild(p);
+            preparoOl.appendChild(instructionDiv);
+        }
 
-    instructionDiv.appendChild(instructionLi);
-    instructionDiv.appendChild(br);
-    instructionDiv.appendChild(p);
-    preparoOl.appendChild(instructionDiv);
-})
-
-
-console.log(receitaDados);
+}
