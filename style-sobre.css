@@ -1,86 +1,87 @@
-* {
+/* global.css */
+
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-  
   }
-
-body{
-    overflow-x:hidden;
-}
-
-header{
-    margin: 0;
-}
-
-.container{
-    position: relative;   
-}.cabecalho{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-}
-
-.cabecalho .barra_inicial {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-}
-
-.cabecalho p{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 10px;
-    font-size: 20px;
-    text-align: center;
-}
-
-.cabecalho .barra_inicial a{
-    text-decoration: none;
-    color: inherit;
-}
-
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-footer {
-    margin-top: 100px;
+  
+  .cabecalho {
     background-color: #E4C05A;
-    height: 100px;
-    align-items: end;
+    color: #fff;
+    padding: 20px;
+  }
+  
+  .barra_inicial a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .hero {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  .hero-content p{
+    text-align: justify;
+  }
+  
+  .team {
+    text-align: center;
+    padding: 80px 0;
+  }
+  
+  .team h2 {
+    margin-bottom: 40px;
+  }
+  
+  .team-members {
     display: flex;
-    justify-content: flex-end;
-}
-
-footer p {
-    margin: 10px 30px 20px 0px;
-    display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    align-content: space-between;
+  }
+  
+  .member {
+    margin: 20px;
+  }
+  
+  .member h3 {
+    margin: 10px 0;
+  }
+  
+  .member p {
+    margin-bottom: 10px;
+  }
+  
+  .social-icons {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .social-icons li {
+    margin: 0 5px;
+  }
+  
+  .social-icons li a {
+    color: #E4C05A;
+    text-decoration: none;
     font-size: 20px;
-}
+  }
+  
+  footer {
+    background-color: #E4C05A;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
