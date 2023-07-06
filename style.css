@@ -14,7 +14,12 @@ body h1{
 }
 
 header{
+    background-image: url("./img/bannerprincipal.png");
     margin:0;
+    height: 600px;
+    
+
+
 }
 
 .container{
@@ -51,6 +56,9 @@ header{
 
   .cabecalho .barra_inicial p {
     margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
     font-size: 20px;
   }
 
@@ -154,6 +162,7 @@ hr{
     flex-direction: column;
     flex-wrap: wrap;
     align-content: center;
+    
 }
 
 #b1{
