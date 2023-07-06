@@ -36,19 +36,36 @@ function loadItens(receitaDados){
     
     const receitasOl = document.querySelector('.ingredientesOl');
 
+
+    //Informações da receita
+    let category = document.querySelector("#category > p");
+    category.innerHTML = receitaDados.strCategory;
+    let serving = document.querySelector("#serving > p");
+    let num = parseInt(Math.random() * (4 - 1 + 1));
+    serving.innerHTML = num == 1?`${num} pessoa`:`${num} pessoas`;
+
+    
     //essa api retorna as receitas fora de um array, então vou ter que contornar isso
     let ingredFromApi = 20;
     for(let i=1; i<=ingredFromApi;i++){
         let ingredientKey = 'strIngredient' + i;
         let ingredient = receitaDados[ingredientKey];
         if (ingredient != ""){
+            const input = document.createElement("input");
+            input.type='checkbox';
+            input.className = 'hidden-box';
+            input.id = ingredient.id;
+
             const ingredientLi = document.createElement('li');
             ingredientLi.innerHTML = ingredient;
             receitasOl.appendChild(ingredientLi);
+            receitasOl.appendChild(input);
         }
     }
+
+
+
     //Para cada instrução a lógica foi quebrar a string vindo da api, baseado na formatação da resposta, caso venha com 1 texto.. 2 texto... ou somente um texto solto
-    let instructionsArray
     if(receitaDados.strInstructions[0] == "1"){
         instructionsArray = receitaDados.strInstructions.split(/\n\d+\s/).filter(Boolean);
     }else{
@@ -62,6 +79,9 @@ function loadItens(receitaDados){
             }else{
                 instructionDiv.className = "direita";
             }
+           
+            
+
             const instructionLi = document.createElement('li');
             instructionLi.innerHTML = "Modo de preparo"
     
