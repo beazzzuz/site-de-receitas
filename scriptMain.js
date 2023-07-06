@@ -53,13 +53,22 @@ function handleMoveToRecipes(key){
     window.location.href = `Receita.html?id=${key}`;
 }
 
-const typeButton = document.querySelector(".typeButton");
-typeButton.addEventListener("click",()=>{
-  handleMoveToTypes()
-})
+// Selecionar os elementos pelos IDs
+const breakfastElement = document.getElementById('Breakfast');
+const sideElement = document.getElementById('Side');
+const pastaElement = document.getElementById('Pasta');
+const vegetarianElement = document.getElementById('Vegetarian');
+const dessertElement = document.getElementById('Dessert');
 
-function handleMoveToTypes(){
-  window.location.href = `Tipos.html`
+// Adicionar event listener a cada elemento
+breakfastElement.addEventListener('click',()=>{ handleMoveToTypes(breakfastElement.id)});
+sideElement.addEventListener('click',()=>{ handleMoveToTypes(sideElement.id)});
+pastaElement.addEventListener('click',()=>{ handleMoveToTypes(pastaElement.id)});
+vegetarianElement.addEventListener('click',()=>{ handleMoveToTypes(vegetarianElement.id)});
+dessertElement.addEventListener('click',()=>{ handleMoveToTypes(dessertElement.id)});
+
+function handleMoveToTypes(type){
+  window.location.href = `Tipos.html?id=${type}`
 }
 //Carrossel
 
@@ -97,5 +106,6 @@ nextBtn.addEventListener('click', () => {
     updateButtons();
   }
 });
+
 
 updateButtons();
