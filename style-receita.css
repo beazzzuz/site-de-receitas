@@ -45,6 +45,13 @@ body {
     white-space: nowrap;
     text-align: center;
   }
+  .cabecalho a {
+    color: #f7941d;
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'lilita one', cursive;
+    
+  }
  
   
 
@@ -216,16 +223,13 @@ footer {
     margin-top: 100px;
     background-color: #E4C05A;
     height: 100px;
-    align-items: end;
+    align-items: center;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
 }
 
 footer p {
-    margin: 10px 30px 20px 0px;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: space-between;
+    color: black;
     font-size: 20px;
 }
 
