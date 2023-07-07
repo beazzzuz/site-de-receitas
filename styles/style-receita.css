@@ -1,0 +1,327 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.parallax {
+  background-image: url("../img/bannerseg2.png");
+  margin: 0;
+  height: 300px;
+  background-attachment: fixed;
+  background-size: contain;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  position: relative;
+}
+
+.cabecalho {
+  display: flex;
+  justify-content: center;
+  font-size: 128px;
+}
+
+.cabecalho .barra_inicial {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  margin: 10px;
+}
+
+.cabecalho .barra_inicial p {
+  margin: 5px;
+  display: flex;
+
+  margin: 15px;
+}
+
+.cabecalho h1 {
+  font-size: 5vw;
+  margin-top: 5%;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.cabecalho a {
+  color: #f7941d;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: "lilita one", cursive;
+}
+
+h1 {
+  margin: 20px;
+  display: flex;
+  font-size: 50px;
+  align-items: center;
+  justify-content: center;
+  font-family: "lilita one", cursive;
+}
+
+.titulo h1 {
+  margin-top: -8%;
+  font-size: 60px;
+}
+
+.primeirasecao {
+  display: flex;
+  width: 100%;
+  height: 500px;
+  align-items: center;
+  justify-content: center;
+}
+
+#fotoReceita {
+  width: 100%;
+  border-radius: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20%;
+}
+
+#fotoReceita img {
+  width: 30%;
+  border-radius: 20px;
+  margin: auto;
+}
+
+.desc {
+  display: flex;
+  align-items: center;
+  margin: 100px;
+  height: 80px;
+  margin-top: -1%;
+  justify-content: center;
+}
+
+.desc div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color:  */
+  box-shadow: 5px 5px #d0dbe2;
+  width: 10%;
+  height: 80%;
+  margin: 10px;
+  border-radius: 10px;
+  gap: 10px;
+  padding: 0 5px;
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 0;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 6px;
+  box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.07);
+  list-style: none;
+  overflow: hidden;
+}
+
+#ingredientes {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  width: auto;
+  margin: auto;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.ingredientesO1 {
+  display: flex;
+  align-items: center;
+}
+
+.item li {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  font-size: 20px;
+}
+
+.item li input {
+  margin: 5px;
+}
+
+.ingtext {
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.ingtext-true {
+  text-decoration: line-through;
+  color: rgb(73, 70, 70);
+  cursor: pointer;
+}
+
+#MeioPagina {
+  background-color: #e4c05a;
+  padding: 10px 0;
+  margin: 50px 0px 100px 0px;
+}
+
+.segundasecao {
+  display: flex;
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.segundasecao li {
+  font-family: "lilita one", cursive;
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+.esquerda {
+  justify-content: flex-start;
+  margin: 10px;
+  padding-right: 50%;
+  font-family: "Franklin Gothic", "Arial Narrow", Arial, sans-serif;
+}
+
+.direita {
+  padding: 50px;
+  padding-left: 50%;
+}
+
+.segundasecao li {
+  font-weight: bold;
+}
+
+#scroll {
+  height: 510px;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: black transparent;
+}
+
+.terceirasecao {
+  display: flex;
+  align-items: center;
+  width: 40%;
+  margin: auto;
+  height: 400px;
+  justify-content: center;
+  background-color: #d9d9d9;
+}
+
+iframe {
+  width: 100%;
+  margin: auto;
+  height: 400px;
+}
+
+@media (max-width: 768px) {
+  .cabecalho a {
+    color: #f7941d;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: "lilita one", cursive;
+  }
+
+  .parallax {
+    background-image: url("../img/bannerseg2.png");
+    margin: 0;
+    height: 150px;
+    background-attachment: fixed;
+    background-size: contain;
+    background-position: top center;
+    background-repeat: no-repeat;
+  }
+
+  h1 {
+    margin: 3rem 3rem 0 3rem;
+    display: flex;
+    font-size: 25px;
+    align-items: center;
+    justify-content: center;
+    font-family: "Pacifico", cursive;
+  }
+
+  .primeirasecao {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #fotoReceita {
+    width: 100%;
+    border-radius: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #fotoReceita img {
+    width: 60%;
+    border-radius: 15px;
+    margin: auto;
+  }
+
+  .desc {
+    display: flex;
+    align-items: center;
+    margin: 3rem 1rem 3rem 1rem;
+    height: 80px;
+    justify-content: center;
+  }
+
+  .desc div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color:  */
+    box-shadow: 5px 5px #d0dbe2;
+    width: 55%;
+    height: 80%;
+    margin: 10px;
+    border-radius: 10px;
+    gap: 10px;
+    padding: 0 5px;
+  }
+
+  #ingredientes {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: auto;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #MeioPagina {
+    background-color: #e4c05a;
+    padding: 10px 0;
+    margin: 3rem 0 3rem 0;
+  }
+}
+
+footer {
+  margin-top: 100px;
+  background-color: #e4c05a;
+  height: 100px;
+
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
