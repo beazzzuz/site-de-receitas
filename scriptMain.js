@@ -8,49 +8,49 @@ let quadroReceitas = document.querySelector(".quadrodereceitas");
 
 let itensPorPagina = 30;
 
-for(let i=0; i<itensPorPagina; i++){
+for (let i = 0; i < itensPorPagina; i++) {
   fetch('https://www.themealdb.com/api/json/v1/1/random.php')
-  .then(response => response.json())
-  .then(data => {
-    const receita = data.meals[0];
-    console.log(receita);
+    .then(response => response.json())
+    .then(data => {
+      const receita = data.meals[0];
+      console.log(receita);
 
-    //Cria elemento por elemento que tem na div de cada receita
-    let receitaDiv = document.createElement('div')
-    receitaDiv.addEventListener('click',()=>{handleMoveToRecipes(receita.idMeal)})
+      //Cria elemento por elemento que tem na div de cada receita
+      let receitaDiv = document.createElement('div')
+      receitaDiv.addEventListener('click', () => { handleMoveToRecipes(receita.idMeal) })
 
-    receitaDiv.id = `receita-${receita.idMeal}` //Id para identificação do conteúdo
-    receitaDiv.className = 'receitaDiv' //coloquei a classe que tava no HTML se mudar la, é necessário mudar aqui para ir o CSS
-    
-    const receitaText = document.createElement('p');
-    receitaText.innerHTML = receita.strMeal;
-    const receitaImg = document.createElement('img');
-    receitaImg.src=receita.strMealThumb;
+      receitaDiv.id = `receita-${receita.idMeal}` //Id para identificação do conteúdo
+      receitaDiv.className = 'receitaDiv' //coloquei a classe que tava no HTML se mudar la, é necessário mudar aqui para ir o CSS
 
-    const imgDiv = document.createElement('div');
-    const propsDiv = document.createElement('div');
+      const receitaText = document.createElement('p');
+      receitaText.innerHTML = receita.strMeal;
+      const receitaImg = document.createElement('img');
+      receitaImg.src = receita.strMealThumb;
 
-    imgDiv.className = 'imgDiv';
-    propsDiv.className = 'propsDiv';
-    
-    //adiciona os elementos no html
-    
-    propsDiv.appendChild(receitaText);
-    imgDiv.appendChild(receitaImg);
+      const imgDiv = document.createElement('div');
+      const propsDiv = document.createElement('div');
 
-    receitaDiv.appendChild(imgDiv);
-    receitaDiv.appendChild(propsDiv);
-    quadroReceitas.appendChild(receitaDiv);
+      imgDiv.className = 'imgDiv';
+      propsDiv.className = 'propsDiv';
 
-  })
-  .catch(error => {
-    console.log('Ocorreu um erro:', error);
-  });
+      //adiciona os elementos no html
+
+      propsDiv.appendChild(receitaText);
+      imgDiv.appendChild(receitaImg);
+
+      receitaDiv.appendChild(imgDiv);
+      receitaDiv.appendChild(propsDiv);
+      quadroReceitas.appendChild(receitaDiv);
+
+    })
+    .catch(error => {
+      console.log('Ocorreu um erro:', error);
+    });
 }
 
-function handleMoveToRecipes(key){
-    //essa key vai ser utilizada para passar por parametro para a página de cada receita
-    window.location.href = `Receita.html?id=${key}`;
+function handleMoveToRecipes(key) {
+  //essa key vai ser utilizada para passar por parametro para a página de cada receita
+  window.location.href = `Receita.html?id=${key}`;
 }
 
 // Selecionar os elementos pelos IDs
@@ -61,13 +61,13 @@ const vegetarianElement = document.getElementById('Vegetarian');
 const dessertElement = document.getElementById('Dessert');
 
 // Adicionar event listener a cada elemento
-breakfastElement.addEventListener('click',()=>{ handleMoveToTypes(breakfastElement.id)});
-sideElement.addEventListener('click',()=>{ handleMoveToTypes(sideElement.id)});
-pastaElement.addEventListener('click',()=>{ handleMoveToTypes(pastaElement.id)});
-vegetarianElement.addEventListener('click',()=>{ handleMoveToTypes(vegetarianElement.id)});
-dessertElement.addEventListener('click',()=>{ handleMoveToTypes(dessertElement.id)});
+breakfastElement.addEventListener('click', () => { handleMoveToTypes(breakfastElement.id) });
+sideElement.addEventListener('click', () => { handleMoveToTypes(sideElement.id) });
+pastaElement.addEventListener('click', () => { handleMoveToTypes(pastaElement.id) });
+vegetarianElement.addEventListener('click', () => { handleMoveToTypes(vegetarianElement.id) });
+dessertElement.addEventListener('click', () => { handleMoveToTypes(dessertElement.id) });
 
-function handleMoveToTypes(type){
+function handleMoveToTypes(type) {
   window.location.href = `Tipos.html?id=${type}`
 }
 //Carrossel

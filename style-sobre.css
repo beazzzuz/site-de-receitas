@@ -33,7 +33,7 @@ body {
 }
 
 .cabecalho .barra_inicial p {
-    margin: 10px;
+    margin: 15px;
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
