@@ -9,7 +9,7 @@ body {
 }
 
 .parallax {
-    background-image: url("./img/bannerprincipal.png");
+    background-image: url("./img/bannerseg2.png");
     margin: 0;
     height: 600px;
     background-attachment: fixed;
@@ -245,7 +245,7 @@ iframe {
     }
     
     .parallax {
-        background-image: url("./img/bannerprincipal.png");
+        background-image: url("./img/bannerseg2.png");
         margin: 0;
         height: 150px;
         background-attachment: fixed;
