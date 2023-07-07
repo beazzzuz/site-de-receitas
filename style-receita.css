@@ -167,11 +167,13 @@ h1 {
 
 .ingtext {
     color: rgb(0, 0, 0);
+    cursor: pointer;
 }
 
 .ingtext-true {
     text-decoration: line-through;
     color: rgb(73, 70, 70);
+    cursor: pointer;
 }
 
 #MeioPagina {
@@ -199,6 +201,8 @@ h1 {
     justify-content: flex-start;
     margin: 10px;
     padding-right: 50%;
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+
 }
 
 .direita {

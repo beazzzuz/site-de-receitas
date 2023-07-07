@@ -41,7 +41,7 @@ function loadItens(receitaDados){
     let category = document.querySelector("#category > p");
     category.innerHTML = receitaDados.strCategory;
     let serving = document.querySelector("#serving > p");
-    let num = parseInt(Math.random() * (4 - 0 + 1));
+    let num = Math.floor(Math.random() * 4) + 1;;
     serving.innerHTML = num == 1?`${num} pessoa`:`${num} pessoas`;
 
     
@@ -49,7 +49,9 @@ function loadItens(receitaDados){
     let ingredFromApi = 20;
     for(let i=1; i<=ingredFromApi;i++){
         let ingredientKey = 'strIngredient' + i;
-        let ingredient = receitaDados[ingredientKey];
+        let ingredientMeasure = 'strMeasure'+ i;
+        if(!receitaDados[ingredientKey]) break;
+        let ingredient = receitaDados[ingredientKey] + "-"+ receitaDados[ingredientMeasure];
         const text = document.createElement('p');
         text.className ="ingtext";
         text.innerHTML = ingredient;
@@ -116,6 +118,14 @@ function loadItens(receitaDados){
             instructionDiv.appendChild(p);
             preparoOl.appendChild(instructionDiv);
         }
+        const video = document.querySelector(".video");
+        const link = receitaDados.strYoutube;
+        // Extrair o ID do vídeo da URL original
+        const urlParams = new URLSearchParams(new URL(link).search);
+        const videoId = urlParams.get("v");
 
+        // Gerar a URL de incorporação
+        const urlEmbed = `https://www.youtube.com/embed/${videoId}`;
+        video.src = urlEmbed;
 
 }

@@ -125,6 +125,7 @@ hr{
 .imagem_div .div_time{
     margin: 0.5rem 0 0 1rem;
     display: flex;
+    align-items: center;
     flex: row;
 }
 
@@ -132,6 +133,7 @@ hr{
     
     display: flex;
     justify-content: flex-start;
+    align-items:center;
     border-radius: 50%;
     height: 1.5rem;
     width: 1.5rem;
@@ -141,7 +143,7 @@ hr{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 0 0 0.5rem;
+    margin: 0;
 }
 
 .texto_div {
@@ -157,7 +159,7 @@ hr{
 .texto_div .p_texto {
     text-align: justify;
     padding: 0.5rem 2rem 2rem 2rem; 
-    font-size: 1em;
+    font-size: 1.5em;
     max-height: 12rem;
     overflow-y: scroll;
 }
