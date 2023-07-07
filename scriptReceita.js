@@ -51,7 +51,7 @@ function loadItens(receitaDados){
         let ingredientKey = 'strIngredient' + i;
         let ingredientMeasure = 'strMeasure'+ i;
         if(!receitaDados[ingredientKey]) break;
-        let ingredient = receitaDados[ingredientKey] + "-"+ receitaDados[ingredientMeasure];
+        let ingredient = receitaDados[ingredientKey] + " "+ receitaDados[ingredientMeasure];
         const text = document.createElement('p');
         text.className ="ingtext";
         text.innerHTML = ingredient;
