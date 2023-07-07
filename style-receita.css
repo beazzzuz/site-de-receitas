@@ -59,8 +59,6 @@ body {
 
 }
 
-
-
 h1 {
     margin: 20px;
     display: flex;
@@ -261,7 +259,7 @@ iframe {
     h1 {
         margin: 3rem 3rem 0 3rem;
         display: flex;
-        font-size: 25px;
+        font-size: 15px;
         align-items: center;
         justify-content: center;
         font-family: 'Pacifico', cursive;
