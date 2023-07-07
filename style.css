@@ -16,7 +16,7 @@ body h1{
 .parallax {
     background-image: url("./img/bannerprincipal.png");
     margin: 0;
-    height: 600px;
+    height: 500px;
     background-attachment: fixed;
     background-size: contain; 
     background-position: top center;
@@ -53,13 +53,13 @@ body h1{
     white-space: nowrap;
     text-align: center;
 }
+
 .cabecalho a {
     color: #f7941d;
     text-decoration: none;
     font-size: 25px;
     font-family: 'lilita one', cursive;
-
-  }
+}
 
 .primeirasecao {
     margin: 10px;
@@ -279,30 +279,55 @@ hr{
     height: 100px;
     width: 100px;;
 }
-#scroll{
+#scroll {
     height: 1200px;
     max-width: 1300px;
+    max-height: 1000px;
     overflow-y: scroll;
     scrollbar-width: thin;
     scrollbar-color: black transparent;
-     max-height: 1000px;/* Cabe exatamente 30 elementos (que foi definido no js) */
-    overflow-y: scroll;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
+  }
+  
+  #scroll::-webkit-scrollbar {
+    width: 10px; /* Largura da barra de rolagem */
+  }
+  
+  #scroll::-webkit-scrollbar-track {
+    background-color: #F5F5F5; /* Cor de fundo da barra de rolagem */
+  }
+  
+  #scroll::-webkit-scrollbar-thumb {
+    background-color: #888; /* Cor do preenchimento da barra de rolagem */
+    border-radius: 5px; /* Raio de borda da barra de rolagem */
+  }
+  
+  #scroll::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Cor do preenchimento da barra de rolagem em hover */
+  }
+  
 
 @media (max-width: 768px) {
     
+    .cabecalho a {
+        color: #f7941d;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'lilita one', cursive;
+    }
+
     .parallax {
         background-image: url("./img/bannerprincipal.png");
         margin: 0;
-        height: 300px;
+        height: 150px;
         background-attachment: fixed;
-        background-size: cover; /* Tornar a imagem responsiva */
-        background-position: center; /* Centralizar a imagem */
-    }
+        background-size: contain; 
+        background-position: top center;
+        background-repeat: no-repeat;
+    } 
 
     .primeirasecao {
         margin: 10px;

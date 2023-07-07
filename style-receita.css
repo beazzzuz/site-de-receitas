@@ -8,13 +8,15 @@ body {
     overflow-x: hidden;
 }
 
-.parallax{
-    background-image: url("./img/bannerseg2.png");
-    margin:0;
-    height: 400px;
+.parallax {
+    background-image: url("./img/bannerprincipal.png");
+    margin: 0;
+    height: 600px;
     background-attachment: fixed;
-    
-}
+    background-size: contain; 
+    background-position: top center;
+    background-repeat: no-repeat;
+} 
 
 .container{
     position: relative;
@@ -223,7 +225,24 @@ h1 {
 }
 
 @media (max-width: 768px) {
+
+    .cabecalho a {
+        color: #f7941d;
+        text-decoration: none;
+        font-size: 15px;
+        font-family: 'lilita one', cursive;
+    }
     
+    .parallax {
+        background-image: url("./img/bannerprincipal.png");
+        margin: 0;
+        height: 150px;
+        background-attachment: fixed;
+        background-size: contain; 
+        background-position: top center;
+        background-repeat: no-repeat;
+    } 
+
     h1 {
         margin: 3rem 3rem 0 3rem;
         display: flex;
