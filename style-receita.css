@@ -24,6 +24,7 @@ body {
     display: flex;
     justify-content: center;
     font-size: 128px;
+   
 }
 
   .cabecalho .barra_inicial {
@@ -31,12 +32,14 @@ body {
     justify-content: flex-start;
     flex-direction: row;
     width: 100%;
+    margin: 10px;
   }
 
   .cabecalho .barra_inicial p {
     margin: 5px;
     display: flex;
-    font-size: 20px;
+    
+    margin: 10px;
   }
 
   .cabecalho h1 {
@@ -48,7 +51,7 @@ body {
   .cabecalho a {
     color: #f7941d;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 25px;
     font-family: 'lilita one', cursive;
 
   }

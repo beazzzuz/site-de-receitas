@@ -44,7 +44,7 @@ body h1{
     display: flex;
     flex-wrap: wrap;
     align-content: space-between;
-    font-size: 20px;
+    font-size: 25px;
     }
 
 .cabecalho h1 {
@@ -53,6 +53,13 @@ body h1{
     white-space: nowrap;
     text-align: center;
 }
+.cabecalho a {
+    color: #f7941d;
+    text-decoration: none;
+    font-size: 25px;
+    font-family: 'lilita one', cursive;
+
+  }
 
 .primeirasecao {
     margin: 10px;

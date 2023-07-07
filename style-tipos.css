@@ -8,22 +8,24 @@ body{
     overflow-x:hidden;
 }
 
-header{
+.parallax {
+    background-image: url("./img/bannerprincipal.png");
     margin: 0;
-}
+    height: 600px;
+    background-attachment: fixed;
+    background-size: contain; 
+    background-position: top center;
+    background-repeat: no-repeat;
+}    
 
 .container{
-    position: relative;   
+    position: relative;
 }
 
-.cabecalho{
+.cabecalho {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
+    justify-content: center;
+    font-size: 128px;
 }
 
 .cabecalho .barra_inicial {
@@ -32,19 +34,27 @@ header{
     width: 100%;
 }
 
-.cabecalho p{
+.cabecalho .barra_inicial p {
+    margin: 10px;
     display: flex;
     flex-wrap: wrap;
-    margin: 10px;
-    font-size: 20px;
+    align-content: space-between;
+    font-size: 25px;
+    }
+
+.cabecalho h1 {
+    font-size: 5vw;
+    margin-top: 5%;
+    white-space: nowrap;
     text-align: center;
 }
-
-.cabecalho .barra_inicial a{
+.cabecalho a {
+    color: #f7941d;
     text-decoration: none;
-    color: inherit;
-}
+    font-size: 25px;
+    font-family: 'lilita one', cursive;
 
+  }
 .title {
     overflow: hidden;
     text-align: center;

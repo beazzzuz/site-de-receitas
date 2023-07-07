@@ -6,15 +6,52 @@ body {
     padding: 0;
   }
   
-  .cabecalho {
-    background-color: #E4C05A;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  .barra_inicial a {
+  .parallax {
+    background-image: url("./img/bannerprincipal.png");
+    margin: 0;
+    height: 600px;
+    background-attachment: fixed;
+    background-size: contain; 
+    background-position: top center;
+    background-repeat: no-repeat;
+}    
+
+.container{
+    position: relative;
+}
+
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    font-size: 128px;
+}
+
+.cabecalho .barra_inicial {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.cabecalho .barra_inicial p {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    font-size: 25px;
+    }
+
+.cabecalho h1 {
+    font-size: 5vw;
+    margin-top: 5%;
+    white-space: nowrap;
+    text-align: center;
+}
+.cabecalho a {
+    color: #f7941d;
     text-decoration: none;
-    color: #fff;
+    font-size: 25px;
+    font-family: 'lilita one', cursive;
+
   }
   
   .hero {
