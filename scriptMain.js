@@ -78,6 +78,33 @@ const carouselItems = carousel.querySelectorAll('.carousel-item');
 const prevBtn = carousel.querySelector('.prev-btn');
 const nextBtn = carousel.querySelector('.next-btn');
 
+
+for (let i=0; i<6;i++){
+  const carouselItem = document.createElement("div");
+  carouselItem.className= "carousel-item";
+  const carouselImg = document.createElement('img');
+  const carouselItemDiv = document.createElement('div');
+  const carouselItemDivP = document.createElement('p');
+  carouselItemDiv.appendChild(carouselItemDivP);
+
+  carouselItem.appendChild(carouselImg);
+  carouselItem.appendChild(carouselItemDiv);
+  carouselInner.appendChild(carouselItem);
+
+  fetch('https://www.themealdb.com/api/json/v1/1/random.php')
+  .then(response => response.json())
+  .then(data => {
+    const receitaCarousel = data.meals[0];
+    carouselImg.src=receitaCarousel.strMealThumb;
+    carouselItemDivP.innerHTML=receitaCarousel.strMeal;
+
+    carouselItem.addEventListener("click", ()=>{
+      handleMoveToRecipes(receitaCarousel.idMeal);
+    })
+  })
+}
+
+
 let currentIndex = 0;
 const itemWidth = carouselItems[0].offsetWidth;
 const itemsPerScreen = 3;
