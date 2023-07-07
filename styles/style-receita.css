@@ -38,7 +38,6 @@ body {
 .cabecalho .barra_inicial p {
   margin: 5px;
   display: flex;
-
   margin: 15px;
 }
 
@@ -227,6 +226,13 @@ iframe {
 }
 
 @media (max-width: 768px) {
+
+  .cabecalho .barra_inicial p {
+    margin: 5px;
+    display: flex;
+    margin: 7px;
+  }
+
   .cabecalho a {
     color: #f7941d;
     text-decoration: none;
@@ -256,7 +262,7 @@ iframe {
 
   .titulo h1 {
     margin-top: 8%;
-    font-size: 40px;
+    font-size: 35px;
   }
 
   .primeirasecao {

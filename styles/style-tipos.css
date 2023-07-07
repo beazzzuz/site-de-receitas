@@ -272,7 +272,7 @@ footer {
   .imagem_div .div_time {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: flex-start;
     margin: 0.5rem 65% 0 0;
   }
 
